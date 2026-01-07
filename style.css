@@ -31,6 +31,7 @@ li {
 .flex {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .between {
@@ -143,8 +144,12 @@ span {
     border-radius: 5rem;
     text-transform: uppercase;
     display: block;
-    justify-self: flex-end;
+    justify-self: flex-start;
     transition: .3s ease-in-out;
+}
+
+.hero-content .btn {
+    justify-self: flex-end;
 }
 
 .btn:hover {
@@ -171,6 +176,7 @@ span {
     border-radius: 1.5rem;
     position: relative;
     transition: transform .3s ease-in-out;
+    flex-basis: 250px;
 
 }
 
@@ -183,13 +189,14 @@ span {
 }
 
 .simple-icon {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: white;
     width: 35px;
     aspect-ratio: 1;
     border-radius: 50%;
     text-align: center;
     line-height: 35px;
+    transition: .3s ease-in-out;
 
 }
 
@@ -203,7 +210,7 @@ span {
 
 .catagory-card:hover .simple-icon {
     background: var(--golden);
-    transform: rotateZ(-50deg) scale(1.1);
+    transform: rotateZ(-50deg);
 }
 
 .catagory-card img {
@@ -212,4 +219,198 @@ span {
     object-fit: cover;
     border-radius: 1.5rem 1.5rem 0 0;
 
+}
+
+/* BED SECTION */
+
+
+
+.h2-heading {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    max-width: 1000px;
+    line-height: 100%;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--golden), var(--brown));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin: auto;
+    text-align: center;
+
+}
+
+.bed-image {
+    width: 75vw;
+    margin-inline: auto;
+    position: relative;
+
+}
+
+.h6-heading {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: .2rem;
+}
+
+.small-para {
+    font-size: .8rem;
+    /* max-width: 250px; */
+    text-transform: capitalize;
+    line-height: 100%;
+    margin-bottom: .7rem;
+
+
+}
+
+.simple-icon:hover {
+    scale: 1.15;
+}
+
+.price {
+    color: var(--brown);
+}
+
+del {
+    color: var(--black);
+    margin-right: 1rem;
+}
+
+.bed-detail {
+    max-width: 270px;
+    background: rgba(244, 240, 244, .4);
+    position: absolute;
+    top: 35px;
+    left: 70%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+
+
+
+/* NEW ARRIVAL */
+.brown-txt {
+    color: brown;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.avg-para {
+    font-size: 1.06rem;
+    color: rgba(0, 0, 0, 0.551);
+    text-transform: capitalize;
+    max-width: 600PX;
+
+}
+
+.product-card {
+    flex: 1;
+    flex-basis: 230px;
+
+}
+
+.product-image {
+    height: 20rem;
+    background-color: var(--gray);
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+small {
+    font-size: .7rem;
+    color: rgba(0, 0, 0, 0.456);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    display: block;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+}
+
+.product-image .btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 150px;
+    bottom: -50px;
+}
+
+.product-card:hover .product-image .btn {
+    bottom: 50px;
+}
+
+.center-btn {
+    justify-self: center;
+}
+
+
+/* ABOUT */
+.about-image {
+    /* background: gold; */
+    max-width: 30rem;
+    height: 35rem;
+    border-radius: 1.5rem;
+    position: relative;
+    transform: rotateZ(3deg);
+    margin-left: 10rem;
+
+
+}
+
+.about-image img {
+    max-width: 30rem;
+    height: 35rem;
+    border-radius: 1.5rem;
+    margin-right: 2rem;
+    transform: rotateZ(2deg);
+    /* margin-left: 0rem; */
+
+}
+
+.about-image::before {
+    content: '';
+    /* background-color: blue; */
+    width: 18rem;
+    height: 22rem;
+    border-radius: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotateZ(-8deg);
+    right: 65%;
+    background-image: url(img/bedroom.jpg);
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+
+    z-index: 999;
+
+
+}
+
+
+
+.about-content p {
+    color: var(--brown);
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.about-content h2 {
+    max-width: 600px;
+    margin-top: .8rem;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
 }
